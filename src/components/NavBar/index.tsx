@@ -2,7 +2,7 @@ const NavBar = () => {
   return (
     <div className="h-[73px] leading-5 text-[15px] font-bold flex justify-between p-6">
       <section className="flex gap-6 items-center">
-        <div className="text-4xl mr-3">Logo</div>
+        <div className="text-3xl mr-3">Sanofi</div>
         <div>Notre Entreprise</div>
         <div>Notre science</div>
         <div>Votre Santé</div>
