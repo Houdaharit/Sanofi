@@ -1,8 +1,8 @@
 const NavBar = () => {
   return (
-    <div className="h-[73px] leading-5 font-bold flex justify-between p-6">
+    <div className="h-[73px] leading-5 text-[15px] font-bold flex justify-between p-6">
       <section className="flex gap-6 items-center">
-        <div className="text-4xl">Logo</div>
+        <div className="text-4xl mr-3">Logo</div>
         <div>Notre Entreprise</div>
         <div>Notre science</div>
         <div>Votre Santé</div>
@@ -14,7 +14,7 @@ const NavBar = () => {
         <div>Carrières</div>
         <div>Partenariat Paris 2024</div>
         <img src="/SearchIcon.svg" />
-        <section className="flex cursor-pointer gap-4">
+        <section className="flex cursor-pointer gap-3">
           <img src="/GlobeIcon.svg" />
           <label>Global</label>
         </section>
