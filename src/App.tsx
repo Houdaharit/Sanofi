@@ -1,12 +1,13 @@
-import NavBar from "./components/NavBar"
+import Layout from "./components/Layout";
 
 function App() {
-
   return (
     <>
-    <NavBar />
+      <Layout>
+        <div>Hello world!</div>
+      </Layout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
