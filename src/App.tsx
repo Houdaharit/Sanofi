@@ -1,10 +1,11 @@
 import Layout from "./components/Layout";
+import Main from "./components/Main";
 
 function App() {
   return (
     <>
       <Layout>
-        <div>Hello world!</div>
+        <Main />
       </Layout>
     </>
   );
