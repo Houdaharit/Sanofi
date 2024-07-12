@@ -1,6 +1,6 @@
 const ArticleBox = () => {
   return (
-    <div className="w-[590px] bg-white rounded-md">
+    <div className="lg:w-[590px] bg-white rounded-md">
       <section className="p-8 flex flex-col gap-4">
         <h3 className="font-bold text-[44px] leading-[72px]">
           Journée des maladies rares 2024 : L'équité en action

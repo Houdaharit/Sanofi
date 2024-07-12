@@ -11,11 +11,13 @@ const logos: string[] = [
 
 const SocialMedia = () => {
   return (
-    <div className="flex gap-4">
-        <div className="leading-6 text-lg text-white font-bold flex items-center">Suivez-nous</div>
-      {logos.map((logo, index) => (
-        <SocialMediaLogo key={index} href={logo} />
-      ))}
+    <div className="flex lg:flex-row flex-col items-center gap-4">
+      <h4 className="leading-6 text-lg text-white font-bold">Suivez-nous</h4>
+      <div className="flex gap-4 flex-wrap justify-center">
+        {logos.map((logo, index) => (
+          <SocialMediaLogo key={index} href={logo} />
+        ))}
+      </div>
     </div>
   );
 };

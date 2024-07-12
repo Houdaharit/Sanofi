@@ -2,7 +2,7 @@ import Logo from "../Logo";
 
 const NavBar = () => {
   return (
-    <nav className="h-[73px] leading-5 text-[15px] font-semibold flex justify-between p-6">
+    <nav id="haut de la page" className="h-[73px] leading-5 text-[15px] font-semibold flex justify-between p-6">
       <section className="flex gap-6 items-center">
         <Logo color="black" />
         <div>Notre Entreprise</div>

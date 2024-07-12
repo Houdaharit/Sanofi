@@ -4,14 +4,12 @@ import TopOfPage from "./TopOfPage";
 
 const Footer = () => {
   return (
-    <footer className="bg-black lg:h-[88px] w-full flex items-center mt-32">
-      <div className="pl-8 pr-8 flex justify-between w-full">
-        <Logo color="white" />
-        <section className="flex gap-16">
-          <SocialMedia />
-          <TopOfPage/>
-        </section>
-      </div>
+    <footer className="bg-black lg:flex-row flex-col flex gap-8 p-5 items-center lg:justify-between">
+      <Logo color="white" />
+      <section className="flex lg:gap-16 gap-8 lg:flex-row flex-col items-center">
+        <SocialMedia />
+        <TopOfPage />
+      </section>
     </footer>
   );
 };
