@@ -1,5 +1,5 @@
 import Card, { CardProps } from "../Card";
-import MainTop from "./private/MainTop";
+//import MainTop from "./private/MainTop";
 import News from "./private/News";
 
 const Main = () => {
@@ -11,12 +11,12 @@ const Main = () => {
   ));
   return (
     <main>
-      <section className="mb-12">
+      {/*<section className="mb-12">
         <MainTop />
-      </section>
-      <section className="pl-32 pr-32 gap-32 flex-col flex">
-        <section className="flex flex-col gap-24">{CardsHorizontal}</section>
-        <section className="flex gap-6">{CardsVertical}</section>
+      </section>*/}
+      <section className="lg:pl-32 lg:pr-32 pr-4 pl-4 lg:gap-32 gap-16 flex-col flex">
+        <section className="flex flex-col lg:gap-24 gap-16">{CardsHorizontal}</section>
+        <section className="flex lg:flex-row flex-col lg:gap-6 gap-16">{CardsVertical}</section>
         <section>
           <News />
         </section>

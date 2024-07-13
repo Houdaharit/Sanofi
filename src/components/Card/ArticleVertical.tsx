@@ -2,7 +2,7 @@ import { CardProps } from ".";
 
 const CardVertical = (props: CardProps) => {
   return (
-    <div className="flex-col w-[383px] border rounded-md shadow-xl overflow-hidden">
+    <div className="flex-col lg:w-[383px] border rounded-md shadow-xl overflow-hidden">
 
       <section>
 
