@@ -1,6 +1,6 @@
 import Logo from "../Logo";
-import SocialMedia from "./SocialMedia";
-import TopOfPage from "./TopOfPage";
+import SocialMedia from "./private/SocialMedia";
+import TopOfPage from "./private/TopOfPage";
 
 const Footer = () => {
   return (

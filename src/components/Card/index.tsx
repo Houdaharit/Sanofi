@@ -1,5 +1,5 @@
-import CardHorizontal from "./ArticleHorizontal";
-import CardVertical from "./ArticleVertical";
+import CardHorizontal from "./private/ArticleHorizontal";
+import CardVertical from "./private/ArticleVertical";
 
 export interface CardProps {
   img: string;
