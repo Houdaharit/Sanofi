@@ -2,11 +2,11 @@ import { CardProps } from ".";
 
 const CardVertical = (props: CardProps) => {
   return (
-    <div className="flex-col lg:w-[383px] border rounded-md shadow-xl overflow-hidden">
+    <div className="flex-col lg:w-[383px] w-full border rounded-md shadow-xl overflow-hidden">
 
       <section>
 
-        <img src={props.img} />
+        <img src={props.img} className="w-full"/>
 
       </section>
       <section className="flex flex-col gap-3 m-6">

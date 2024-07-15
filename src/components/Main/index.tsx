@@ -1,5 +1,5 @@
 import Card, { CardProps } from "../Card";
-//import MainTop from "./private/MainTop";
+import MainTop from "./private/MainTop";
 import News from "./private/News";
 
 const Main = () => {
@@ -10,13 +10,17 @@ const Main = () => {
     <Card {...card} key={index} />
   ));
   return (
-    <main>
-      {/*<section className="mb-12">
+    <main> 
+      <section>
         <MainTop />
-      </section>*/}
-      <section className="lg:pl-32 lg:pr-32 pr-4 pl-4 lg:gap-32 gap-16 flex-col flex">
-        <section className="flex flex-col lg:gap-24 gap-16">{CardsHorizontal}</section>
-        <section className="flex lg:flex-row flex-col lg:gap-6 gap-16">{CardsVertical}</section>
+      </section>
+      <section className="xl:ml-32 xl:mr-32 lg:ml-9 lg:mr-9 ml-4 mr-4">
+        <section className="flex flex-col lg:gap-32 gap-16 mb-32">
+          {CardsHorizontal}
+        </section>
+        <section className="flex gap-4 flex-col lg:flex-row mb-32">
+          {CardsVertical}
+        </section>
         <section>
           <News />
         </section>
