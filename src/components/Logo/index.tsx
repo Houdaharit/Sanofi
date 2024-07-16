@@ -1,14 +1,9 @@
 const Logo = ({ color }: { color: string }) => {
   return (
-    <div
-      className={
-        color === "white"
-          ? "text-3xl text-white font-bold"
-          : "text-3xl font-bold"
-      }
-    >
-      Sanofi
-    </div>
+  <>
+  {color === "black" && <img src="/sanofi-black.svg" />}
+  {color === "white" && <img src="/sanofi-white.svg" />}
+  </>
   );
 };
 export default Logo;
