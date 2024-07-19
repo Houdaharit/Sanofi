@@ -4,6 +4,7 @@ import SmallNavBar from "./private/SmallNavBar";
 
 const NavBar = () => {
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [scrollY, setScrollY] = useState<number>(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -18,8 +19,30 @@ const NavBar = () => {
     };
   }, []);
 
-  if (windowWidth < 1280) return <SmallNavBar />;
-  else return <LargeNavBar />;
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  if (windowWidth < 1280)
+    return (
+      <div className={scrollY > 0 ? "fixed z-10" : ""}>
+        <SmallNavBar />
+      </div>
+    );
+  else
+    return (
+      <div className={scrollY > 0 ? "fixed z-10" : ""}>
+        <LargeNavBar />
+      </div>
+    );
 };
 
 export default NavBar;
