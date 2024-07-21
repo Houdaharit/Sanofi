@@ -1,8 +1,15 @@
 import Logo from "../../Logo";
 
-const LargeNavBar = () => {
+const LargeNavBar = ({ scrollY }: { scrollY: number }) => {
   return (
-    <nav id="haut de la page" className="h-[73px] leading-5 text-[15px] font-semibold flex justify-between p-6 bg-white w-screen">
+    <nav
+      id="haut de la page"
+      className={
+        scrollY > 0
+          ? "h-[73px] leading-5 text-[15px] font-semibold flex justify-between p-6 bg-white w-full fixed z-10 top-0 shadow-lg"
+          : "h-[73px] leading-5 text-[15px] font-semibold flex justify-between p-6 bg-white w-full fixed z-10 top-0 shadow"
+      }
+    >
       <section className="flex gap-6 items-center">
         <Logo color="black" />
         <div>Notre Entreprise</div>
