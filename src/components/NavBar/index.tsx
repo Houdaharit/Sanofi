@@ -31,18 +31,8 @@ const NavBar = () => {
     };
   }, []);
 
-  if (windowWidth < 1280)
-    return (
-      <div className={scrollY > 0 ? "fixed z-10" : ""}>
-        <SmallNavBar />
-      </div>
-    );
-  else
-    return (
-      <div className={scrollY > 0 ? "fixed z-10" : ""}>
-        <LargeNavBar />
-      </div>
-    );
+  if (windowWidth < 1280) return <SmallNavBar scrollY={scrollY}/>;
+  else return <LargeNavBar scrollY={scrollY}/>;
 };
 
 export default NavBar;
