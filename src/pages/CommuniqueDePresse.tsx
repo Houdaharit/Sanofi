@@ -3,9 +3,9 @@ import Layout from "../components/Layout";
 
 const CommuniqueDePresse = () => {
   return (
-    <Layout>
-      <Main />
-    </Layout>
+      <Layout>
+        <Main />
+      </Layout>
   );
 };
 export default CommuniqueDePresse;
