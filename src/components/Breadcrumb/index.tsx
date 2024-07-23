@@ -10,9 +10,9 @@ const Breadcrumb = () => {
       {/*<Typography color="text.primary">Accueil</Typography>
       <Typography color="text.primary">Média</Typography>
       <Typography color="text.primary">Communiqués de presse</Typography>*/}
-      <text className="text-xs flex">Accueil</text>
-      <text className="text-xs flex">Média</text>
-      <text className="text-xs flex">Communiqués de presse</text>
+      <text className="text-xs flex font-medium">Accueil</text>
+      <text className="text-xs flex font-medium">Média</text>
+      <text className="text-xs flex font-medium">Communiqués de presse</text>
     </Breadcrumbs>
   );
 };
