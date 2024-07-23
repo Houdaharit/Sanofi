@@ -25,6 +25,7 @@ const ArticleBox = () => {
 
     return () => {
       if (divRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(divRef.current);
       }
     };
