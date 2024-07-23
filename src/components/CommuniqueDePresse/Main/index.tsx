@@ -2,22 +2,31 @@ import { NewsTitleProps } from "../../News/NewsTitle";
 import TopMain from "./private/TopMain";
 import News from "../../News";
 import Breadcrumb from "../../Breadcrumb";
+import { useWindowWindowContext } from "../../../providers/WindowWidthProvider";
+import PaginationButtons from "../../Pagination";
 
 const Main = () => {
+  const { windowWidth } = useWindowWindowContext();
+  
   return (
     <main>
-      <section className="mt-20 lg:ml-8 ml-4">
-        <Breadcrumb />
+      <section className="lg:mt-20 lg:ml-8 ml-4">
+        {windowWidth > 1280 && <Breadcrumb />}
       </section>
-      <section>
+      <section className={windowWidth < 1280 ? "mt-16" : ""}>
         <TopMain />
       </section>
 
       <section className="mt-12 xl:ml-32 xl:mr-32 lg:ml-9 lg:mr-9 ml-4 mr-4">
-        <section >
+        <section>
           <News news={news} />
         </section>
       </section>
+
+      <section className="mt-8 mb-24 flex justify-center">
+        <PaginationButtons />
+      </section>
+
     </main>
   );
 };
