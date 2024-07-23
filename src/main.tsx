@@ -4,6 +4,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage.tsx";
 import CommuniqueDePresse from "./pages/CommuniqueDePresse.tsx";
+import NotreEntreprise from "./pages/NotreEntreprise.tsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "media/communique de presse",
     element: <CommuniqueDePresse />,
+  },
+  {
+    path: "notre entreprise",
+    element: <NotreEntreprise />,
   },
 ]);
 
