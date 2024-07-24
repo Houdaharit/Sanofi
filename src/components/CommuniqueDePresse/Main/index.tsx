@@ -4,14 +4,25 @@ import News from "../../News";
 import Breadcrumb from "../../Breadcrumb";
 import { useWindowWindowContext } from "../../../providers/WindowWidthProvider";
 import PaginationButtons from "../../Pagination";
+import { Link } from "react-router-dom";
+
+const breadcrumbProps = [
+  <Link to="/" className="text-xs flex font-medium leading-6 font-worksans">
+    Accueil
+  </Link>,
+  <text className="text-xs flex font-medium leading-6 font-worksans">Média</text>,
+  <text className="text-xs flex font-medium leading-6 font-worksans">
+    Communiqués de presse
+  </text>,
+];
 
 const Main = () => {
   const { windowWidth } = useWindowWindowContext();
-  
+
   return (
     <main>
       <section className="lg:mt-20 lg:ml-8 ml-4">
-        {windowWidth > 1280 && <Breadcrumb />}
+        {windowWidth > 1280 && <Breadcrumb props={breadcrumbProps} />}
       </section>
       <section className={windowWidth < 1280 ? "mt-16" : ""}>
         <TopMain />
@@ -26,7 +37,6 @@ const Main = () => {
       <section className="mt-8 mb-24 flex justify-center">
         <PaginationButtons />
       </section>
-
     </main>
   );
 };
