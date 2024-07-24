@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../../Logo";
 
 const LargeNavBar = ({ scrollY }: { scrollY: number }) => {
@@ -11,15 +12,17 @@ const LargeNavBar = ({ scrollY }: { scrollY: number }) => {
       }
     >
       <section className="flex gap-6 items-center">
+        <Link to="/">
         <Logo color="black" />
-        <div>Notre Entreprise</div>
+        </Link>
+        <Link to="/notre entreprise">Notre Entreprise</Link>
         <div>Notre science</div>
         <div>Votre Santé</div>
         <div>Partenariat</div>
       </section>
 
       <section className="flex gap-6 items-center">
-        <div>Média</div>
+        <Link to="/media/communique de presse">Média</Link>
         <div>Investisseurs</div>
         <div>Carrières</div>
         <div>Partenariat Paris 2024</div>
