@@ -4,6 +4,7 @@ import Breadcrumb from "../../Breadcrumb";
 import { CardProps } from "../../Card";
 import CardHorizontal from "../../Card/private/ArticleHorizontal";
 import TopMain from "./private/TopMain";
+import { useWindowWindowContext } from "../../../providers/WindowWidthProvider";
 
 const breadcrumbProps = [
   <Link to="/" className="flex font-medium text-xs font-worksans leading-6">
@@ -12,6 +13,8 @@ const breadcrumbProps = [
   <text className="flex font-medium text-xs font-worksans leading-6">Notre Entreprise</text>,
 ];
 const Main = () => {
+  const {windowWidth} = useWindowWindowContext();
+
   const Cards = cardsHorizontal.map((card, index) => (
     <CardHorizontal key={index} {...card} />
   ));
@@ -19,10 +22,10 @@ const Main = () => {
   return (
     <BoxProvider>
       <section className="lg:mt-20 lg:ml-8 ml-4 mb-1">
-        <Breadcrumb props={breadcrumbProps} />
+        {windowWidth > 1280 && <Breadcrumb props={breadcrumbProps} />}
       </section>
 
-      <section>
+      <section className={windowWidth < 1280 ? "mt-16" : ""}>
         <TopMain />
       </section>
 
