@@ -4,7 +4,7 @@ import CardVertical from "./private/ArticleVertical";
 export interface CardProps {
   img: string;
   title: string;
-  text: string;
+  text: string[];
   order?: string;
   vertical?: boolean;
 }
